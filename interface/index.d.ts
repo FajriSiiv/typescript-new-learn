@@ -4,3 +4,20 @@ interface Props {
   inte: number;
   fn: () => void;
 }
+
+interface Todo {
+  id: number;
+  todo: string;
+  isDone: boolean;
+}
+
+interface TodoListProps {
+  todos: Todo[];
+  setTodos: React.Dispatch<React.SetStateAction<Todo[]>>;
+}
+
+interface SingleTodoProps {
+  todo: Todo;
+  todos: Todo[];
+  setTodos: Dispatch<SetStateAction<Todo[]>>;
+}
